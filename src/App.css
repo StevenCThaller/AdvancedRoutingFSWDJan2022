@@ -1,0 +1,13 @@
+.box {
+  border: 2px solid black;
+  border-radius: 10px;
+  width: 150px;
+  height: 150px;
+}
+
+.myTitle {
+  font-size: 1.1em !important;
+  color: blue !important;
+  text-shadow: 4px 2px 9px red;
+  
+}
