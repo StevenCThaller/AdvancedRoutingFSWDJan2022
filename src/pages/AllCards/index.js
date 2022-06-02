@@ -19,11 +19,8 @@ const AllCards = () => {
     <Container>
       <Col as={'ul'}>
       {
-        allCards.map((card) => <li><Link to={`/cards/all/${card.id}`}>{card.name}</Link></li>)
+        allCards.map((card) => <li><Link to={`/cards/${card.id}`}>{card.name}</Link></li>)
       }
-      </Col>
-      <Col>
-        
       </Col>
     </Container>
   )

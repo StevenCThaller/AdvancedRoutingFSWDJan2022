@@ -11,3 +11,29 @@
   text-shadow: 4px 2px 9px red;
   
 }
+
+.sets-tool {
+  /* padding: 5px 25px !important; */
+  height: 80vh;
+}
+
+.sets-tool ul {
+  list-style: none;
+}
+
+.sets-col {
+  height: 80vh;
+  overflow-y: auto;
+}
+
+.collapse-btn {
+  border: none;
+  background-color: white;
+  padding: 0;
+}
+
+.col-head {
+  display: flex;
+  justify-content: space-evenly;
+  align-items: center;
+}

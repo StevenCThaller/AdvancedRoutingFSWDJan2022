@@ -1,7 +1,7 @@
 import axios from 'axios'
 import React, { useEffect, useState } from 'react'
 import { Col } from 'react-bootstrap'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useNavigate, useParams } from 'react-router-dom'
 import SetCardInfo from './SetCardInfo'
 
 const CardsInSet = () => {
@@ -11,6 +11,8 @@ const CardsInSet = () => {
   const params = useParams()
   const { setId } = params 
   const cardId = params['*']
+
+  const navigate = useNavigate()
 
 
 
@@ -26,12 +28,21 @@ const CardsInSet = () => {
 
   return (
     <>
-      <Col as='ul'>
-        {
-          cards.map((card) => <li key={card.id}><Link to={`/cards/sets/${setId}/${card.id}`}>{card.name}</Link></li>)
-        }
+      <Col xs={4}>
+        <h3 className="col-head">
+          Cards 
+          {
+            cardId !== '' &&
+            <button className="collapse-btn" onClick={() => navigate(`/cards/sets/${setId}`)}>&lt;&lt;</button>
+          }
+        </h3>
+        <ul className="sets-col">
+          {
+            cards.map((card) => <li key={card.id}><Link to={`/cards/sets/${setId}/${card.id}`}>{card.name}</Link></li>)
+          }
+        </ul>
       </Col>
-      <Col>
+      <Col xs={4} className="sets-col">
         {
           card && <SetCardInfo card={card} />
         }

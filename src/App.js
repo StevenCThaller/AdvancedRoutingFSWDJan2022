@@ -32,6 +32,10 @@ const linksForNavbar = [
       {
         path: "/random",
         text: "Random Card"
+      },
+      {
+        path: "/sets",
+        text: "Sets Tool"
       }
     ]
   }
